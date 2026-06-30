@@ -20,6 +20,7 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 
 ### AI Tools Used
 - **Android Studio AI Assistant (Gemini)**: Used for scaffolding the project structure, generating data models from JSON, and implementing UI components based on design descriptions.
+- - **Antigravity**: Used for debugs and fix UI- Alignment problem in home screen, fix bottom sliding bar in categories section, images missing in Popular courses etc...
 
 ### Prompts Sent
 1. "Extract the JSON structure from this URL and define Kotlin data models using Kotlin Serialization: https://raw.githubusercontent.com/android-assesment/notes/refs/heads/main/data.json"
