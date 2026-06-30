@@ -1,0 +1,342 @@
+{
+  "meta": {
+    "app": "Skillforge",
+    "version": "1.0",
+    "generatedAt": "2026-06-22"
+  },
+  "categories": [
+    {
+      "id": "cat_android",
+      "name": "Android Development",
+      "description": "Build modern, production-ready Android apps with Kotlin.",
+      "iconColor": "#2dd4bf",
+      "courseCount": 2,
+      "courses": [
+        {
+          "id": "course_kotlin_101",
+          "title": "Kotlin Fundamentals",
+          "subtitle": "Everything you need to start writing Kotlin",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/2dd4bf/png?text=Kotlin+Fundamentals",
+          "level": "Beginner",
+          "durationHours": 6.5,
+          "rating": 4.7,
+          "studentsEnrolled": 18420,
+          "language": "English",
+          "lastUpdated": "2026-03-12",
+          "tags": [
+            "Kotlin",
+            "Basics",
+            "JVM"
+          ],
+          "instructor": {
+            "id": "inst_aarav",
+            "name": "Aarav Sharma",
+            "title": "Senior Android Engineer",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Aarav+Sharma&size=150&background=2dd4bf&color=ffffff&bold=true&format=png",
+            "bio": "10+ years building Android apps used by millions of people."
+          },
+          "description": "Start from zero and learn Kotlin's syntax, null safety, collections, and functions. By the end you'll be comfortable reading and writing idiomatic Kotlin.",
+          "lessons": [
+            {
+              "id": "les_k1",
+              "title": "Welcome & Setup",
+              "durationMinutes": 8,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/k1",
+              "content": "Set up Android Studio and run your first Kotlin file."
+            },
+            {
+              "id": "les_k2",
+              "title": "Variables & Null Safety",
+              "durationMinutes": 15,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/k2",
+              "content": "Learn val vs var, nullable types, and the safe-call operator."
+            },
+            {
+              "id": "les_k3",
+              "title": "Functions & Lambdas",
+              "durationMinutes": 18,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/k3",
+              "content": "Write functions, use default arguments, and pass lambdas around."
+            }
+          ]
+        },
+        {
+          "id": "course_compose_201",
+          "title": "Jetpack Compose Essentials",
+          "subtitle": "Build UIs the modern, declarative way",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/2dd4bf/png?text=Jetpack+Compose+Essentials",
+          "level": "Intermediate",
+          "durationHours": 9.0,
+          "rating": 4.8,
+          "studentsEnrolled": 11230,
+          "language": "English",
+          "lastUpdated": "2026-04-02",
+          "tags": [
+            "Compose",
+            "UI",
+            "State"
+          ],
+          "instructor": {
+            "id": "inst_meera",
+            "name": "Meera Nair",
+            "title": "Android UI Specialist",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Meera+Nair&size=150&background=2dd4bf&color=ffffff&bold=true&format=png",
+            "bio": "Conference speaker and author focused on Android UI and Compose."
+          },
+          "description": "Learn composable functions, state management, layouts, and lists to build beautiful, reactive Android interfaces with Jetpack Compose.",
+          "lessons": [
+            {
+              "id": "les_c1",
+              "title": "Your First Composable",
+              "durationMinutes": 12,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/c1",
+              "content": "Create and preview a simple composable function."
+            },
+            {
+              "id": "les_c2",
+              "title": "State & Recomposition",
+              "durationMinutes": 20,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/c2",
+              "content": "Understand remember, mutableStateOf, and how recomposition works."
+            },
+            {
+              "id": "les_c3",
+              "title": "Lists with LazyColumn",
+              "durationMinutes": 16,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/c3",
+              "content": "Render scrollable lists efficiently using LazyColumn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_backend",
+      "name": "Backend & APIs",
+      "description": "Design and build the services that power your apps.",
+      "iconColor": "#34d399",
+      "courseCount": 2,
+      "courses": [
+        {
+          "id": "course_rest_301",
+          "title": "Designing REST APIs",
+          "subtitle": "Principles of clean, predictable APIs",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/34d399/png?text=Designing+REST+APIs",
+          "level": "Intermediate",
+          "durationHours": 5.0,
+          "rating": 4.6,
+          "studentsEnrolled": 8740,
+          "language": "English",
+          "lastUpdated": "2026-02-20",
+          "tags": [
+            "REST",
+            "HTTP",
+            "API Design"
+          ],
+          "instructor": {
+            "id": "inst_rahul",
+            "name": "Rahul Verma",
+            "title": "Backend Architect",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Rahul+Verma&size=150&background=34d399&color=ffffff&bold=true&format=png",
+            "bio": "Designs large-scale APIs and mentors backend teams."
+          },
+          "description": "Learn resource modeling, status codes, pagination, versioning, and error handling to design REST APIs that clients love to consume.",
+          "lessons": [
+            {
+              "id": "les_r1",
+              "title": "What Makes an API RESTful",
+              "durationMinutes": 10,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/r1",
+              "content": "Resources, verbs, and statelessness explained simply."
+            },
+            {
+              "id": "les_r2",
+              "title": "Status Codes & Errors",
+              "durationMinutes": 14,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/r2",
+              "content": "Use the right HTTP codes and design clear error bodies."
+            },
+            {
+              "id": "les_r3",
+              "title": "Pagination & Filtering",
+              "durationMinutes": 13,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/r3",
+              "content": "Handle large collections with paging and query params."
+            }
+          ]
+        },
+        {
+          "id": "course_node_302",
+          "title": "Node.js from Scratch",
+          "subtitle": "Build your first backend service",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/34d399/png?text=Node.js+from+Scratch",
+          "level": "Beginner",
+          "durationHours": 7.5,
+          "rating": 4.5,
+          "studentsEnrolled": 15310,
+          "language": "English",
+          "lastUpdated": "2026-01-30",
+          "tags": [
+            "Node.js",
+            "Express",
+            "Backend"
+          ],
+          "instructor": {
+            "id": "inst_sara",
+            "name": "Sara Khan",
+            "title": "Full-stack Developer",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Sara+Khan&size=150&background=34d399&color=ffffff&bold=true&format=png",
+            "bio": "Builds full-stack products and loves teaching beginners."
+          },
+          "description": "Go from nothing to a working REST service using Node.js and Express, including routing, middleware, and connecting to a database.",
+          "lessons": [
+            {
+              "id": "les_n1",
+              "title": "Setting Up Node",
+              "durationMinutes": 9,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/n1",
+              "content": "Install Node and run your first script."
+            },
+            {
+              "id": "les_n2",
+              "title": "Your First Express Server",
+              "durationMinutes": 17,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/n2",
+              "content": "Create routes and return JSON responses."
+            },
+            {
+              "id": "les_n3",
+              "title": "Middleware Basics",
+              "durationMinutes": 12,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/n3",
+              "content": "Add logging and request parsing with middleware."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_design",
+      "name": "Product & UI Design",
+      "description": "Design interfaces that people enjoy using.",
+      "iconColor": "#fbbf24",
+      "courseCount": 2,
+      "courses": [
+        {
+          "id": "course_uiux_401",
+          "title": "UI/UX Foundations",
+          "subtitle": "Core principles of great product design",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/fbbf24/png?text=UI%2FUX+Foundations",
+          "level": "Beginner",
+          "durationHours": 4.5,
+          "rating": 4.7,
+          "studentsEnrolled": 9980,
+          "language": "English",
+          "lastUpdated": "2026-03-25",
+          "tags": [
+            "UX",
+            "UI",
+            "Design"
+          ],
+          "instructor": {
+            "id": "inst_diya",
+            "name": "Diya Patel",
+            "title": "Product Designer",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Diya+Patel&size=150&background=fbbf24&color=ffffff&bold=true&format=png",
+            "bio": "Designs delightful mobile experiences at scale."
+          },
+          "description": "Understand hierarchy, spacing, color, and typography, and learn a simple process for designing screens that are clear and usable.",
+          "lessons": [
+            {
+              "id": "les_u1",
+              "title": "Visual Hierarchy",
+              "durationMinutes": 11,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/u1",
+              "content": "Guide the eye with size, weight, and spacing."
+            },
+            {
+              "id": "les_u2",
+              "title": "Color & Contrast",
+              "durationMinutes": 13,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/u2",
+              "content": "Pick accessible color palettes that actually work."
+            },
+            {
+              "id": "les_u3",
+              "title": "Typography Basics",
+              "durationMinutes": 10,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/u3",
+              "content": "Choose and pair fonts for readable interfaces."
+            }
+          ]
+        },
+        {
+          "id": "course_figma_402",
+          "title": "Figma for Developers",
+          "subtitle": "Turn designs into code, faster",
+          "thumbnailUrl": "https://placehold.co/600x360/0f1720/fbbf24/png?text=Figma+for+Developers",
+          "level": "Intermediate",
+          "durationHours": 3.5,
+          "rating": 4.6,
+          "studentsEnrolled": 7120,
+          "language": "English",
+          "lastUpdated": "2026-04-10",
+          "tags": [
+            "Figma",
+            "Handoff",
+            "Design"
+          ],
+          "instructor": {
+            "id": "inst_arjun",
+            "name": "Arjun Mehta",
+            "title": "Design Engineer",
+            "avatarUrl": "https://ui-avatars.com/api/?name=Arjun+Mehta&size=150&background=fbbf24&color=ffffff&bold=true&format=png",
+            "bio": "Bridges design and engineering with design systems."
+          },
+          "description": "Learn to read Figma files, inspect specs, export assets, and translate components into clean front-end code.",
+          "lessons": [
+            {
+              "id": "les_f1",
+              "title": "Navigating Figma",
+              "durationMinutes": 8,
+              "isFree": true,
+              "videoUrl": "https://example.com/v/f1",
+              "content": "Frames, layers, and the inspect panel."
+            },
+            {
+              "id": "les_f2",
+              "title": "Reading Specs",
+              "durationMinutes": 12,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/f2",
+              "content": "Get exact sizes, colors, and spacing for handoff."
+            },
+            {
+              "id": "les_f3",
+              "title": "Exporting Assets",
+              "durationMinutes": 9,
+              "isFree": false,
+              "videoUrl": "https://example.com/v/f3",
+              "content": "Export images and icons at the right resolutions."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
