@@ -4,10 +4,8 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 
 ## 📱 Demo & Downloads
 
-
 ### Watch the Demo
-![Skillforge Demo](https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4)
-
+- 🎬 **[Skillforge Main Demo](https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4)**
 
 ### Download the App
 - 📥 **[Download Skillforge APK (Google Drive)](https://drive.google.com/file/d/1D8H6zrF-r3SGUa1vTGFi7lomznX9GuB3/view?usp=sharing)**
@@ -22,13 +20,6 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 - **Responsive UI**: Custom "Cream + Teal" theme matching the exact design specifications.
 
 ## 🛠 Tech Stack
-=======
-https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4
-
-
-
-## Tech Stack
->>>>>>> 5d1531ac0d19d07badb85d307f27cca0b7f79cb0
 - **Jetpack Compose**: For the modern, declarative UI.
 - **Retrofit & Kotlinx Serialization**: For network calls and JSON parsing.
 - **Coil**: For efficient image loading and caching.
@@ -39,11 +30,7 @@ https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4
 
 ### AI Tools Used
 - **Android Studio AI Assistant (Gemini)**: Used for scaffolding the project structure, generating data models from JSON, and implementing UI components based on design descriptions.
-<<<<<<< HEAD
 - **Antigravity**: Instrumental in debugging and fixing UI alignment issues on the home screen, implementing the functional sliding bar in the categories section, and resolving image loading issues in the Popular Courses list.
-=======
-- - **Antigravity**: Used for debugs and fix UI- Alignment problem in home screen, fix bottom sliding bar in categories section, images missing in Popular courses etc...
->>>>>>> 5d1531ac0d19d07badb85d307f27cca0b7f79cb0
 
 ### Prompts Sent
 1. "Extract the JSON structure from this URL and define Kotlin data models using Kotlin Serialization: https://raw.githubusercontent.com/android-assesment/notes/refs/heads/main/data.json"
@@ -57,12 +44,3 @@ https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4
 ## 🧪 Testing
 The project includes unit tests for core logic, such as the `isFree()` check on courses.
 Run tests using: `./gradlew test`
-
-https://drive.google.com/file/d/1D8H6zrF-r3SGUa1vTGFi7lomznX9GuB3/view?usp=sharing
-
-https://github.com/user-attachments/assets/9caec903-ddda-4624-beaa-99474ddb3cc7
-
-
-
-
-
