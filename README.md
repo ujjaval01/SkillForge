@@ -6,10 +6,6 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 
 ### Watch the Demo
 - 🎬 **[Skillforge Main Demo](https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4)**
-<<<<<<< HEAD
-- 🎬 **[Feature Walkthrough](https://github.com/user-attachments/assets/9caec903-ddda-4624-beaa-99474ddb3cc7)**
-=======
->>>>>>> c4064426528445f9ba90946e8984e98f827cd65f
 
 ### Download the App
 - 📥 **[Download Skillforge APK (Google Drive)](https://drive.google.com/file/d/1D8H6zrF-r3SGUa1vTGFi7lomznX9GuB3/view?usp=sharing)**
