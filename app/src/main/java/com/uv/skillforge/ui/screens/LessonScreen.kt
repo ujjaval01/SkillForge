@@ -114,6 +114,7 @@ fun LessonContent(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VideoPlayerPlaceholder(onBackClick: () -> Unit) {
     Box(
@@ -167,8 +168,27 @@ fun VideoPlayerPlaceholder(onBackClick: () -> Unit) {
                 modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
                 colors = SliderDefaults.colors(
                     thumbColor = Color.White,
-                    activeTrackColor = TealPrimary
-                )
+                    activeTrackColor = TealPrimary,
+                    inactiveTrackColor = Color.White.copy(alpha = 0.24f)
+                ),
+                thumb = {
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp)
+                            .clip(CircleShape)
+                            .background(Color.White)
+                    )
+                },
+                track = { sliderState ->
+                    SliderDefaults.Track(
+                        sliderState = sliderState,
+                        colors = SliderDefaults.colors(
+                            activeTrackColor = TealPrimary,
+                            inactiveTrackColor = Color.White.copy(alpha = 0.24f)
+                        ),
+                        modifier = Modifier.height(4.dp)
+                    )
+                }
             )
             Text(text = "06:00", color = Color.White, fontSize = 12.sp)
         }
