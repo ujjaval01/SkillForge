@@ -40,6 +40,9 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import com.uv.skillforge.data.model.Category
 import com.uv.skillforge.data.model.Course
 import com.uv.skillforge.ui.SkillforgeUiState
@@ -221,7 +224,7 @@ fun HomeContent(categories: List<Category>, onCourseClick: (String) -> Unit) {
 fun CustomScrollIndicator(state: LazyListState, modifier: Modifier = Modifier) {
     val coroutineScope = rememberCoroutineScope()
     
-    val scrollProgress by remember {
+    val scrollProgress by remember(state) {
         derivedStateOf {
             val layoutInfo = state.layoutInfo
             val visibleItemsInfo = layoutInfo.visibleItemsInfo
@@ -230,17 +233,30 @@ fun CustomScrollIndicator(state: LazyListState, modifier: Modifier = Modifier) {
             } else {
                 val totalItemsCount = layoutInfo.totalItemsCount
                 val firstVisibleItem = visibleItemsInfo.first()
-                val lastVisibleItem = visibleItemsInfo.last()
-                
-                val itemsShown = lastVisibleItem.index - firstVisibleItem.index + 1
-                if (itemsShown >= totalItemsCount) {
+                val itemSize = firstVisibleItem.size.toFloat()
+                if (itemSize == 0f) {
                     0f
                 } else {
-                    val firstItemOffset = firstVisibleItem.offset.toFloat()
-                    val itemSize = firstVisibleItem.size.toFloat()
-                    val scrollOffset = firstVisibleItem.index + (-firstItemOffset / itemSize)
+                    val spacing = if (visibleItemsInfo.size > 1) {
+                        (visibleItemsInfo[1].offset - visibleItemsInfo[0].offset - firstVisibleItem.size).toFloat()
+                    } else {
+                        0f
+                    }
+                    val beforePadding = layoutInfo.beforeContentPadding.toFloat()
+                    val afterPadding = layoutInfo.afterContentPadding.toFloat()
+                    val viewportWidth = (layoutInfo.viewportEndOffset - layoutInfo.viewportStartOffset).toFloat()
                     
-                    (scrollOffset / (totalItemsCount - itemsShown)).coerceIn(0f, 1f)
+                    val totalContentWidth = totalItemsCount * itemSize + 
+                            (totalItemsCount - 1).coerceAtLeast(0) * spacing + 
+                            beforePadding + afterPadding
+                    
+                    val maxScrollRange = totalContentWidth - viewportWidth
+                    if (maxScrollRange <= 0f) {
+                        0f
+                    } else {
+                        val currentScroll = firstVisibleItem.index * (itemSize + spacing) + (beforePadding - firstVisibleItem.offset)
+                        (currentScroll / maxScrollRange).coerceIn(0f, 1f)
+                    }
                 }
             }
         }
@@ -379,6 +395,54 @@ fun CategoryItem(category: Category) {
 }
 
 @Composable
+fun CourseThumbnail(course: Course, modifier: Modifier = Modifier) {
+    val gradientColors = when (course.id) {
+        "course_kotlin_101" -> listOf(Color(0xFF2DD4BF), Color(0xFF0D9488)) // Teal
+        "course_compose_201" -> listOf(Color(0xFF6366F1), Color(0xFF4F46E5)) // Indigo/Purple
+        "course_node_302" -> listOf(Color(0xFF10B981), Color(0xFF059669)) // Emerald/Green
+        else -> {
+            if (course.id.contains("android")) {
+                listOf(Color(0xFF2DD4BF), Color(0xFF0D9488))
+            } else if (course.id.contains("node") || course.id.contains("rest")) {
+                listOf(Color(0xFF10B981), Color(0xFF059669))
+            } else {
+                listOf(Color(0xFFFBBF24), Color(0xFFD97706)) // Amber/Orange
+            }
+        }
+    }
+
+    Box(
+        modifier = modifier
+            .background(Brush.linearGradient(colors = gradientColors))
+            .padding(10.dp)
+    ) {
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            drawCircle(
+                color = Color.White.copy(alpha = 0.12f),
+                radius = size.minDimension * 0.7f,
+                center = Offset(size.width * 0.9f, size.height * 0.3f)
+            )
+            drawCircle(
+                color = Color.White.copy(alpha = 0.08f),
+                radius = size.minDimension * 0.4f,
+                center = Offset(size.width * 0.1f, size.height * 0.8f)
+            )
+        }
+
+        Text(
+            text = course.title,
+            color = Color.White,
+            fontSize = 11.sp,
+            fontWeight = FontWeight.ExtraBold,
+            lineHeight = 13.sp,
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .fillMaxWidth(0.95f)
+        )
+    }
+}
+
+@Composable
 fun CourseItem(course: Course, onClick: () -> Unit) {
     Card(
         modifier = Modifier
@@ -390,23 +454,13 @@ fun CourseItem(course: Course, onClick: () -> Unit) {
         border = BorderStroke(1.dp, Color(0xFFF0F0F0))
     ) {
         Row(modifier = Modifier.padding(12.dp)) {
-            Box(
+            CourseThumbnail(
+                course = course,
                 modifier = Modifier
                     .width(130.dp)
                     .height(90.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFF5F5F5))
-            ) {
-                AsyncImage(
-                    model = ImageRequest.Builder(LocalContext.current)
-                        .data(course.thumbnailUrl)
-                        .crossfade(true)
-                        .build(),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
-            }
+            )
             Spacer(modifier = Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 val levelColor = when (course.level.lowercase()) {
