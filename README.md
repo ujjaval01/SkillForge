@@ -9,6 +9,10 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 - **Network Handling**: Built-in loading and error states for a smooth user experience.
 - **Responsive UI**: "Cream + Teal" theme matching the provided design specifications.
 
+https://github.com/user-attachments/assets/db897304-8d6a-4fca-99e9-86b1822911e4
+
+
+
 ## Tech Stack
 - **Jetpack Compose**: For the modern, declarative UI.
 - **Retrofit & Kotlinx Serialization**: For network calls and JSON parsing.
@@ -34,3 +38,12 @@ Skillforge is a tiny learning app built with Jetpack Compose, Retrofit, and Kotl
 ## Testing
 The project includes unit tests for core logic, such as the `isFree()` check on courses.
 Run tests using: `./gradlew test`
+
+https://drive.google.com/file/d/1D8H6zrF-r3SGUa1vTGFi7lomznX9GuB3/view?usp=sharing
+
+https://github.com/user-attachments/assets/9caec903-ddda-4624-beaa-99474ddb3cc7
+
+
+
+
+
